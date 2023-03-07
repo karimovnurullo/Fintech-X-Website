@@ -1,0 +1,41 @@
+:root {
+    --blue-color: #0b6dff;
+    --black-color: #080808;
+    --white-color: #fff;
+    --grey-color: #575757;
+    --grey-white-color: #cccccc;
+    --hover-nav-color: #989898;
+}
+
+.section_2_container{
+    background-color: #f6f6f6;
+
+    .section__2{
+        height: fit-content;
+        padding: 80px;
+        
+        .section__2_img_box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            
+            img{
+                margin: 12px 36px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+            .karimov_img{
+                margin: auto;
+                // margin: 12px 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                letter-spacing: 1px;
+                font-weight: 700;
+            }
+        }
+    }
+}

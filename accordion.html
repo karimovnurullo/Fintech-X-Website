@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .accordion_container {
+            padding: 20px 0;
+            position: relative;
+            margin: 10px 10px;
+            border-top: 1px solid rgba(165, 165, 165, 0.495);
+            border-bottom: 1px solid rgba(165, 165, 165, 0.495);
+        }
+        .label {
+            position: relative;
+            padding: 40px 0;
+            font-size: 22px;
+            color: black;
+            cursor: pointer;
+        }
+        .label span {
+            margin-right: 30px;
+            color: blue;
+            font-weight: 600;
+        }
+        .label .uil {
+            font-size: 30px;
+            color: rgba(165, 165, 165, 0.495);
+            position: absolute;
+            right: 20px;
+            top: 35px;
+            transition: all 0.3s;
+        }
+        .content {
+            position: relative;
+            height: 0;
+            font-size: 16px;
+            text-align: justify;
+            color: #575757;
+            overflow: hidden;
+            transition: 0.3s;
+            margin-left: 60px;
+            width: 500px;
+            transform: translate3d(0px, 20px, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+        }
+
+        .accordion_container.active .content {
+            height: 70px;
+        }
+
+        .accordion_container.active .label .uil {
+            transform: rotate(90deg);
+            transition: all 0.3s;
+        }
+
+        .accordion_container.active .content {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            margin-top: -20px;
+
+        }
+    </style>
+</head>
+
+<body>
+  
+            <div class="accordion_container">
+                <div class="label"><span>01</span> What banks are you currently partnered with? <i
+                        class="uil uil-arrow-right"></i></div>
+                <div class="content">At auctor urna nunc id pharetra pharetra massa massa ultricies mi quis hendrerit
+                    dolor magna a pellentesque sit amet porttitor eget dolor morbi non sit amet luctus venenatis lectus
+                    magna.</div>
+            </div>
+
+    <script>
+        const accordion = document.getElementsByClassName('accordion_container');
+
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+
+</html>
